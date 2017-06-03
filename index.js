@@ -5,13 +5,17 @@ module.exports = function FindEventMobs(dispatch) {
     let userId;
     let translate = require('./lib/translate/lib/translate');
 
+    let monsterNames = {
+        blueBox: '이벤트 보물상자'
+    };
+
     dispatch.hook('S_LOGIN', 1, event => {
         userId = event.playerId;
         console.log("Login");
     });
 
     dispatch.hook('S_SPAWN_NPC', 3, event => {
-        if (event.npcName == '이벤트 보물상자') {
+        if (event.npcName == monsterNames.blueBox) {
             console.log(spawnId);
             dispatch.toClient('S_DUNGEON_EVENT_MESSAGE', 1, {
                 unk1: 42,
