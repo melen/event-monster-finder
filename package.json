@@ -1,0 +1,7 @@
+{
+  "name": "event-monster-finder",
+  "version": "1.0",
+  "description": "Searches for event mobs and does stuff",
+  "author": "Melen",
+  "license": "GPL-3.0"
+}
